@@ -1,60 +1,69 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #e6e6e6;
+  margin: 0;
+  padding: 0;
 }
 
-.container, .box, .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.button {
-    flex-direction: column;
-    height: 100%;
-}
-
-.box {
-    height: 20rem;
-    width: 50rem;
+dialog {
+  border: none;
+  background-color: rgb(198 241 206 / 50%);
+  padding: 0.5rem;
+  width: 24rem;
+  border-radius: 0.3rem;
+  margin-top: 2rem;
+  box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
-.on, .off {
-    width: 50%;
-    padding: 1rem;
-    text-align: center;
+.alert_box,
+.top_side,
+.alert_content {
+  display: flex;
+  align-items: center;
+}
+.alert_box,
+.alert_content {
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1.3rem;
 }
 
-.button button {
-    padding: 1.2rem 2rem;
-    border-radius: 0.8rem;
-    font-size: 1.4rem;
-    border: none;
-    outline: none;
+.alert_content {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.top_side {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+}
+.top_side span {
+  color: green;
+}
+span.success_icon {
+  color: green;
 }
 
-.on {
-    background: white;
+button#close_modal {
+  color: red;
+  border: none;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
-.off {
-    background: rgb(255, 240, 240);
+.click_btn {
+  border: none;
+  outline: none;
+  color: white;
+  background-color: green;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  margin-bottom: 0.8rem;
 }
-
-.on button {
-    background: rgb(189, 250, 214);
-}
-
-.off button {
-    background: rgb(243, 179, 179);
-}
-
-button:hover {
-    cursor: pointer;
-    box-shadow: 1px 1px 2px lightgray;
+dialog::backdrop {
+  background-color: white;
 }
